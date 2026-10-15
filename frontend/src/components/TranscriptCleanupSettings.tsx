@@ -56,6 +56,7 @@ export function TranscriptCleanupSettings() {
       prompt: nextPrompt,
       apiKey: nextModel.apiKey ?? null,
     });
+    toast.success('Transcript cleanup settings saved', { id: 'transcript-cleanup-saved' });
   }, []);
 
   const [promptSaver] = useState(() => createDebouncedSaver<string>(
